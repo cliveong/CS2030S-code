@@ -1,18 +1,19 @@
 package cs2030.simulator;
 
 public class ReturnEvent extends Event {
-	private final Server replacement;
 
-	public ReturnEvent(Customer customer, Server replacement, copiedRNG rng, double est) {
-		super(x -> {
-			return Pair.of(x, null);			  
-		},customer,rng,est);
-		this.replacement = replacement;
-	}
+    /**
+     * Makes the server avail to work again after resting.
+     * 
+     * @param customer    the customer
+     * @param replacement the server
+     * @param rng         rng
+     * @param est         event starting time
+     */
 
-
-	@Override 
-	public String toString() {
-		return "ReturnEvent";
-	}
+    public ReturnEvent(Customer customer, Server replacement, RNG rng, double est) {
+        super(x -> {
+            return Pair.of(x, null);
+        }, customer, rng, est);
+    }
 }

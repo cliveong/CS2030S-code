@@ -1,18 +1,19 @@
 package cs2030.simulator;
+
 public class Customer {
-	private final int ID;
-	private final double arrivalTime;
+    private final int customerID;
+    private final double arrivalTime;
 
-	public Customer(int customerID, double arrivalTime) {
-		this.ID = customerID;
-		this.arrivalTime = arrivalTime;
-	}
+    public Customer(int customerID, double arrivalTime) {
+        this.customerID = customerID;
+        this.arrivalTime = arrivalTime;
+    }
 
-	public int getIdentifier() {
-		return this.ID;
-	}
+    public int getID() {
+        return this.customerID;
+    }
 
-	public double getArrivalTime() {
-		return this.arrivalTime;
-	} 
+    public double getArrTime() {
+        return this.arrivalTime;
+    }
 }
